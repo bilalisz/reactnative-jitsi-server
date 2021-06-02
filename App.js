@@ -21,6 +21,7 @@ const [joinMeeting,setJoinMeeting]=useState(false)
         </TouchableOpacity>:
         
         <Jitsi onClose={()=>setJoinMeeting(false)}/>
+        // <LiveVideScreen onClose={()=>setJoinMeeting(false)}/>
        
       
       }

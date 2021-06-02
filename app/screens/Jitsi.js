@@ -8,7 +8,7 @@ function Jitsi({onClose,onConferenceTerminated}) {
 
   useEffect(() => {
     setTimeout(() => {
-      const url = 'https://meet.jit.si/exemple123';
+      const url = 'https://meet.jit.si/example123';
       const userInfo = {
         displayName: 'User',
         email: 'user@example.com',
@@ -18,7 +18,7 @@ function Jitsi({onClose,onConferenceTerminated}) {
       /* Você também pode usar o JitsiMeet.audioCall (url) para chamadas apenas de áudio */
       /* Você pode terminar programaticamente a chamada com JitsiMeet.endCall () */
     }, 1000);
-  }, [])
+  })
 
   useEffect(() => {
     return () => {
@@ -44,7 +44,7 @@ function Jitsi({onClose,onConferenceTerminated}) {
   return (
     <>
     <JitsiMeetView
-      onConferenceTerminated={e => onConferenceTerminated(e)}
+      onConferenceTerminated={e=>onConferenceTerminated(e)}
       onConferenceJoined={e => onConferenceJoined(e)}
       onConferenceWillJoin={e => onConferenceWillJoin(e)}
       style={{
@@ -55,7 +55,7 @@ function Jitsi({onClose,onConferenceTerminated}) {
       
 
     />
-    <View><Text onPress={onConferenceTerminated} style={{color:'#fff',fontSize:18}}>Close</Text></View>
+    <View><Text onPress={onConferenceTerminated}  style={{color:'#fff',fontSize:18}}>Close</Text></View>
     </>
   )
 }
